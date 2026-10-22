@@ -62,9 +62,11 @@ try { .\gradlew.bat assembleRelease --no-daemon -q; Check "Gradle" } finally { P
 Copy-Item "$root\android\app\build\outputs\apk\release\app-release.apk" "$out\BatteryHub-$version.apk"
 
 Step "Somas de verificação"
-Get-ChildItem $out -File | Where-Object Name -ne "SHA256SUMS.txt" | ForEach-Object {
+$sums = Get-ChildItem $out -File | Where-Object Name -ne "SHA256SUMS.txt" | ForEach-Object {
     "{0}  {1}" -f (Get-FileHash $_.FullName -Algorithm SHA256).Hash.ToLower(), $_.Name
-} | Set-Content "$out\SHA256SUMS.txt" -Encoding ascii
+}
+# LF (não CRLF) para o arquivo funcionar com `sha256sum -c` em qualquer sistema
+[IO.File]::WriteAllText("$out\SHA256SUMS.txt", (($sums -join "`n") + "`n"), [Text.Encoding]::ASCII)
 
 Step "Pronto"
 Get-ChildItem $out | Select-Object Name, @{n = "MB"; e = { [math]::Round($_.Length / 1MB, 2) } } | Format-Table -AutoSize
