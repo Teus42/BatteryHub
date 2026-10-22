@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tema escuro: mesma paleta do painel do PC. -->
+<resources>
+    <color name="bg">#2B2B2B</color>
+    <color name="card">#383838</color>
+    <color name="input">#2B2B2B</color>
+    <color name="border">#454545</color>
+    <color name="text">#FFFFFF</color>
+    <color name="muted">#A6A6A6</color>
+
+    <color name="primary">#3B82F6</color>
+    <color name="primary_pressed">#2F6BD1</color>
+    <color name="secondary">#474747</color>
+    <color name="secondary_pressed">#3B3B3B</color>
+    <color name="secondary_text">#FFFFFF</color>
+    <color name="on_primary">#FFFFFF</color>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- O servidor fica num IP da rede local (sem domínio nem TLS), então o tráfego
+     HTTP puro precisa ser permitido. A autenticação é feita por token. -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

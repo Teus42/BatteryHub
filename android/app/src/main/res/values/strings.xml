@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Battery Hub</string>
+    <string name="server_title">Servidor (seu PC)</string>
+    <string name="hint_host">IP do PC (ex.: 192.168.0.10)</string>
+    <string name="hint_port">Porta</string>
+    <string name="activation_title">Ativação</string>
+    <string name="hint_code">123-456</string>
+    <string name="activate">Ativar dispositivo</string>
+    <string name="reactivate">Ativar com novo código</string>
+    <string name="activating">Ativando…</string>
+    <string name="not_activated">Não ativado. Cadastre o dispositivo no PC e digite o código de 6 dígitos.</string>
+    <string name="activated_as">Ativado como “%1$s”</string>
+    <string name="activated_toast">Dispositivo ativado</string>
+    <string name="invalid_code">Digite os 6 dígitos</string>
+    <string name="save">Salvar servidor</string>
+    <string name="required">Obrigatório</string>
+    <string name="invalid_port">Porta entre 1 e 65535</string>
+    <string name="interval_title">Envio automático</string>
+    <string name="interval_help">Ativo sempre que o dispositivo estiver ativado, inclusive após reiniciar. Intervalos curtos consomem mais bateria.</string>
+    <string name="hint_interval">Intervalo (minutos)</string>
+    <string name="apply_interval">Aplicar intervalo</string>
+    <string name="interval_applied">Enviando a cada %1$d min</string>
+    <string name="invalid_interval">Use um valor entre %1$d e %2$d minutos</string>
+    <string name="notif_channel">Envio de bateria</string>
+    <string name="notif_text">%1$s · a cada %2$d min</string>
+    <string name="find_card_title">Localizar dispositivo</string>
+    <string name="find_card_help">Quando o PC procurar este aparelho, ele toca no volume máximo e vibra, mesmo no modo silencioso. Para tocar também com o Não Perturbe ligado, permita o acesso abaixo.</string>
+    <string name="dnd_allow">Permitir no Não Perturbe</string>
+    <string name="dnd_allowed">Não Perturbe: permitido ✓</string>
+    <string name="find_channel">Localizar dispositivo</string>
+    <string name="find_title">Este aparelho está sendo localizado</string>
+    <string name="find_text">O PC pediu que ele toque. Toque em Parar para silenciar.</string>
+    <string name="find_stop">Parar</string>
+    <string name="find_banner">O PC está procurando este aparelho. Ele está tocando e vibrando.</string>
+    <string name="find_banner_stop">Parar toque</string>
+    <string name="send_test">Enviar agora (teste)</string>
+    <string name="sending">Enviando…</string>
+    <string name="no_attempts">Nenhum envio realizado ainda</string>
+    <string name="background_title">Segundo plano</string>
+    <string name="background_help">Alguns fabricantes encerram apps em segundo plano. Libere este app da otimização de bateria para os envios não falharem.</string>
+    <string name="battery_opt">Isentar da otimização de bateria</string>
+    <string name="already_exempt">Já está isento</string>
+    <string name="vendor_guide">Guia para o meu fabricante</string>
+</resources>

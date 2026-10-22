@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Largura máxima aplicada em MainActivity (colunas estreitas em tablets). -->
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="28dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/text"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <!-- Aviso de "localizar dispositivo": só aparece enquanto o aparelho toca a pedido do PC -->
+            <LinearLayout
+                android:id="@+id/find_banner"
+                style="@style/Card"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/CardTitle"
+                    android:text="@string/find_banner" />
+
+                <Button
+                    android:id="@+id/find_stop"
+                    style="@style/AppButton.Primary"
+                    android:text="@string/find_banner_stop" />
+            </LinearLayout>
+
+            <!-- Servidor -->
+            <LinearLayout style="@style/Card">
+
+                <TextView
+                    style="@style/CardTitle"
+                    android:text="@string/server_title" />
+
+                <EditText
+                    android:id="@+id/host"
+                    style="@style/Input"
+                    android:hint="@string/hint_host"
+                    android:inputType="textUri" />
+
+                <EditText
+                    android:id="@+id/port"
+                    style="@style/Input"
+                    android:hint="@string/hint_port"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/save"
+                    style="@style/AppButton"
+                    android:text="@string/save" />
+            </LinearLayout>
+
+            <!-- Ativação -->
+            <LinearLayout style="@style/Card">
+
+                <TextView
+                    style="@style/CardTitle"
+                    android:text="@string/activation_title" />
+
+                <TextView
+                    android:id="@+id/activation_status"
+                    style="@style/Muted"
+                    android:layout_marginTop="4dp" />
+
+                <EditText
+                    android:id="@+id/code"
+                    style="@style/Input"
+                    android:digits="0123456789-"
+                    android:gravity="center"
+                    android:hint="@string/hint_code"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:minHeight="60dp"
+                    android:textSize="28sp" />
+
+                <Button
+                    android:id="@+id/activate"
+                    style="@style/AppButton.Primary" />
+            </LinearLayout>
+
+            <!-- Envio -->
+            <LinearLayout style="@style/Card">
+
+                <TextView
+                    style="@style/CardTitle"
+                    android:text="@string/interval_title" />
+
+                <TextView
+                    style="@style/Muted"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/interval_help" />
+
+                <EditText
+                    android:id="@+id/interval"
+                    style="@style/Input"
+                    android:hint="@string/hint_interval"
+                    android:inputType="number"
+                    android:maxLength="4" />
+
+                <Button
+                    android:id="@+id/apply_interval"
+                    style="@style/AppButton"
+                    android:text="@string/apply_interval" />
+
+                <Button
+                    android:id="@+id/test"
+                    style="@style/AppButton"
+                    android:text="@string/send_test" />
+
+                <TextView
+                    android:id="@+id/status"
+                    style="@style/Muted"
+                    android:layout_marginTop="12dp" />
+            </LinearLayout>
+
+            <!-- Localizar dispositivo -->
+            <LinearLayout style="@style/Card">
+
+                <TextView
+                    style="@style/CardTitle"
+                    android:text="@string/find_card_title" />
+
+                <TextView
+                    style="@style/Muted"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/find_card_help" />
+
+                <Button
+                    android:id="@+id/dnd_access"
+                    style="@style/AppButton" />
+            </LinearLayout>
+
+            <!-- Segundo plano -->
+            <LinearLayout style="@style/Card">
+
+                <TextView
+                    style="@style/CardTitle"
+                    android:text="@string/background_title" />
+
+                <TextView
+                    style="@style/Muted"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/background_help" />
+
+                <Button
+                    android:id="@+id/battery_opt"
+                    style="@style/AppButton"
+                    android:text="@string/battery_opt" />
+
+                <Button
+                    android:id="@+id/vendor_guide"
+                    style="@style/AppButton"
+                    android:text="@string/vendor_guide" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</ScrollView>
